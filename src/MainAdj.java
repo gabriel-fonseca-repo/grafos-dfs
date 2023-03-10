@@ -1,7 +1,9 @@
-import grafo.Grafo;
+import abst.Grafo;
+import grafo.GrafoAdj;
 import grafo.Vertice;
 
-public class Main {
+public class MainAdj {
+
     public static Grafo<String> grafo;
 
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class Main {
         dizSeTemCiclo(grafo);
     }
 
-    private static void dizSeTemCiclo(Grafo<String> grafo) {
+    private static void dizSeTemCiclo(Grafo<?> grafo) {
         if (grafo.verificaCiclo()) {
             System.out.println("Existe um ciclo\n");
         } else {
@@ -29,7 +31,7 @@ public class Main {
         B.adicionarConectado(A);
         C.adicionarConectado(B);
 
-        grafo = new Grafo<>();
+        grafo = new GrafoAdj<>();
         grafo.adicionarVertice(A);
         grafo.adicionarVertice(B);
         grafo.adicionarVertice(C);
@@ -49,7 +51,7 @@ public class Main {
         D.adicionarConectado(A);
         */
 
-        grafo = new Grafo<>();
+        grafo = new GrafoAdj<>();
         grafo.adicionarVertice(A);
         grafo.adicionarVertice(B);
         grafo.adicionarVertice(C);

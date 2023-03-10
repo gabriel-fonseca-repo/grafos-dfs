@@ -32,4 +32,8 @@ public class Vertice<E> {
     public void setVisitado(boolean visitado) {
         this.visitado = visitado;
     }
+
+    public E getElemento() {
+        return elemento;
+    }
 }
