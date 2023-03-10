@@ -1,26 +1,58 @@
-import grafos.Grafo;
-import grafos.No;
-
-import java.util.ArrayList;
+import grafo.Grafo;
+import grafo.Vertice;
 
 public class Main {
+    public static Grafo<String> grafo;
+
     public static void main(String[] args) {
-        Grafo<String> grafo = new Grafo<>(4);
-        grafo.adicionarVertice(new No<>("eita0", 0), new No<>("eita1", 1));
-        grafo.adicionarVertice(new No<>("eita0", 0), new No<>("eita2", 2));
-        grafo.adicionarVertice(new No<>("eita1", 1), new No<>("eita2", 2));
-        grafo.adicionarVertice(new No<>("eita2", 2), new No<>("eita0", 3));
-        grafo.adicionarVertice(new No<>("eita2", 2), new No<>("eita3", 3));
-        grafo.adicionarVertice(new No<>("eita3", 3), new No<>("eita3", 3));
+        criarGrafo1();
+        dizSeTemCiclo(grafo);
 
-        if (grafo.ehCiclico()) {
-            System.out.println("é cíclico");
+        criarGrafo2();
+        dizSeTemCiclo(grafo);
+    }
+
+    private static void dizSeTemCiclo(Grafo<String> grafo) {
+        if (grafo.verificaCiclo()) {
+            System.out.println("Existe um ciclo\n");
         } else {
-            System.out.println("não é cíclico");
+            System.out.println("Não existe um ciclo\n");
         }
+    }
 
-        Grafo.printarGrafo(new ArrayList<>(grafo.getNos()));
+    public static void criarGrafo1() {
+        Vertice<String> A = new Vertice<>("A");
+        Vertice<String> B = new Vertice<>("B");
+        Vertice<String> C = new Vertice<>("C");
 
+        A.adicionarConectado(C);
+        B.adicionarConectado(A);
+        C.adicionarConectado(B);
 
+        grafo = new Grafo<>();
+        grafo.adicionarVertice(A);
+        grafo.adicionarVertice(B);
+        grafo.adicionarVertice(C);
+    }
+
+    public static void criarGrafo2() {
+        Vertice<String> A = new Vertice<>("A");
+        Vertice<String> B = new Vertice<>("B");
+        Vertice<String> C = new Vertice<>("C");
+        Vertice<String> D = new Vertice<>("D");
+
+        A.adicionarConectado(B);
+        B.adicionarConectado(C);
+        C.adicionarConectado(D);
+        /*
+        A.adicionarConectado(A);
+        D.adicionarConectado(A);
+        */
+
+        grafo = new Grafo<>();
+        grafo.adicionarVertice(A);
+        grafo.adicionarVertice(B);
+        grafo.adicionarVertice(C);
+        grafo.adicionarVertice(D);
     }
 }

@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Grafo<T> {
+
     private final List<Vertice<T>> vertices;
+
     private int[][] matriz;
 
     public Grafo() {
@@ -45,8 +47,7 @@ public class Grafo<T> {
         }
     }
 
-    @SuppressWarnings("unused")
-    private void imprimirMatrizAdjacencia(int[][] matriz) {
+    public void imprimirMatrizAdjacencia(int[][] matriz) {
         for (int[] linha : matriz) {
             for (int coluna : linha) {
                 System.out.print(coluna + " ");

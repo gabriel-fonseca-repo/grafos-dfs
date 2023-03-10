@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Vertice<E> {
+
     private final E elemento;
+
     private final List<Vertice<E>> verticesConectados;
+
     private boolean visitado;
 
     public Vertice(E elemento) {
@@ -17,8 +20,6 @@ public class Vertice<E> {
     public void adicionarConectado(Vertice<E> conectado) {
         this.verticesConectados.add(conectado);
     }
-
-    // Getters e Setters
 
     public List<Vertice<E>> getVerticesConectados() {
         return verticesConectados;
