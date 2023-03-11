@@ -2,7 +2,7 @@ package grafo;
 
 import abst.Grafo;
 
-public class GrafoAdj<T> extends Grafo<T> {
+public class GrafoListAdj<T> extends Grafo<T> {
 
     @Override
     public boolean verificaCiclo() {

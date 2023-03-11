@@ -1,5 +1,5 @@
 import abst.Grafo;
-import grafo.GrafoAdj;
+import grafo.GrafoListAdj;
 import grafo.Vertice;
 
 public class MainAdj {
@@ -31,7 +31,7 @@ public class MainAdj {
         B.adicionarConectado(A);
         C.adicionarConectado(B);
 
-        grafo = new GrafoAdj<>();
+        grafo = new GrafoListAdj<>();
         grafo.adicionarVertice(A);
         grafo.adicionarVertice(B);
         grafo.adicionarVertice(C);
@@ -51,7 +51,7 @@ public class MainAdj {
         D.adicionarConectado(A);
         */
 
-        grafo = new GrafoAdj<>();
+        grafo = new GrafoListAdj<>();
         grafo.adicionarVertice(A);
         grafo.adicionarVertice(B);
         grafo.adicionarVertice(C);

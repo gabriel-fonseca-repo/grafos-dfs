@@ -1,5 +1,5 @@
 import abst.Grafo;
-import grafo.GrafoMatriz;
+import grafo.GrafoMatrAdj;
 import grafo.Vertice;
 
 public class MainMatriz {
@@ -31,7 +31,7 @@ public class MainMatriz {
         B.adicionarConectado(A);
         C.adicionarConectado(B);
 
-        grafo = new GrafoMatriz<>();
+        grafo = new GrafoMatrAdj<>();
         grafo.adicionarVertice(A);
         grafo.adicionarVertice(B);
         grafo.adicionarVertice(C);
@@ -46,12 +46,12 @@ public class MainMatriz {
         A.adicionarConectado(B);
         B.adicionarConectado(C);
         C.adicionarConectado(D);
-        /*
-        A.adicionarConectado(A);
-        D.adicionarConectado(A);
-        */
 
-        grafo = new GrafoMatriz<>();
+        //A.adicionarConectado(A);
+        //D.adicionarConectado(B);
+
+
+        grafo = new GrafoMatrAdj<>();
         grafo.adicionarVertice(A);
         grafo.adicionarVertice(B);
         grafo.adicionarVertice(C);

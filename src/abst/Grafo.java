@@ -21,4 +21,8 @@ public abstract class Grafo<T> {
 
     public abstract boolean verificaCiclo();
 
+    public List<Vertice<T>> getVertices() {
+        return this.vertices;
+    }
+
 }
