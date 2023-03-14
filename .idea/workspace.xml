@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d7d5ba-a833-497c-a06b-d7556f97c069" name="Changes" comment="Deletada versão inicial.">
-      <change afterPath="$PROJECT_DIR$/src/MainArvoreDeDecisao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainFluxoDeAtendimento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/GrafoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="34d7d5ba-a833-497c-a06b-d7556f97c069" name="Changes" comment="Refatoração e criação de exemplos nos slides.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainAdj.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainMatriz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMatriz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abst/Grafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/abst/Grafo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainArvoreDeDecisao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainArvoreDeDecisao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFluxoDeAtendimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFluxoDeAtendimento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/grafo/GrafoListAdj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grafo/GrafoListAdj.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/grafo/GrafoMatrAdj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grafo/GrafoMatrAdj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grafo/Vertice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grafo/Vertice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/OutputUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/OutputUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/GrafoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/GrafoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/OutputUtil.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +61,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainFluxoDeAtendimento">
+  <component name="RunManager" selected="Application.MainArvoreDeDecisao1">
     <configuration name="MainArvoreDeDecisao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainArvoreDeDecisao" />
       <module name="grafos-dfs" />
@@ -104,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainFluxoDeAtendimento" />
         <item itemvalue="Application.MainArvoreDeDecisao1" />
+        <item itemvalue="Application.MainFluxoDeAtendimento" />
         <item itemvalue="Application.MainMatriz" />
         <item itemvalue="Application.MainMatriz" />
       </list>
@@ -120,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678235166490</updated>
       <workItem from="1678235167305" duration="4639000" />
-      <workItem from="1678811378147" duration="6528000" />
+      <workItem from="1678811378147" duration="7394000" />
     </task>
     <task id="LOCAL-00001" summary="Deletada versão inicial.">
       <created>1678406769305</created>
@@ -129,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678406769305</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refatoração e criação de exemplos nos slides.">
+      <created>1678818415116</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678818415122</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +149,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deletada versão inicial." />
-    <option name="LAST_COMMIT_MESSAGE" value="Deletada versão inicial." />
+    <MESSAGE value="Refatoração e criação de exemplos nos slides." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refatoração e criação de exemplos nos slides." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

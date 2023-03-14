@@ -2,7 +2,6 @@ package grafo;
 
 import abst.Grafo;
 import util.GrafoUtil;
-import util.OutputUtil;
 
 public class GrafoMatrAdj<T> extends Grafo<T> {
 
@@ -11,7 +10,7 @@ public class GrafoMatrAdj<T> extends Grafo<T> {
 	@Override
 	public boolean verificaCiclo() {
 		matriz = GrafoUtil.construirMatriz(this);
-		OutputUtil.imprimirMatrizAdjacencia(matriz, this);
+		GrafoUtil.imprimirMatrizAdjacencia(matriz, this);
 		vertices.get(0).setVisitado(true);
 		return verificaCiclo(0);
 	}

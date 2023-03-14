@@ -17,7 +17,8 @@ public abstract class Grafo<T> {
 		this.vertices.add(vertice);
 	}
 
-	public void adicionarVertice(Vertice<T>... vertice) {
+	@SafeVarargs
+	public final void adicionarVertice(Vertice<T>... vertice) {
 		this.vertices.addAll(List.of(vertice));
 	}
 

@@ -27,7 +27,8 @@ public class Vertice<E> {
 		this.verticesConectados.add(conectado);
 	}
 
-	public void adicionarConectado(Vertice<E>... conectados) {
+	@SafeVarargs
+	public final void adicionarConectado(Vertice<E>... conectados) {
 		this.verticesConectados.addAll(List.of(conectados));
 	}
 

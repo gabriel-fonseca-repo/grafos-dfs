@@ -7,19 +7,19 @@ public class MainArvoreDeDecisao {
 	public static Grafo<String> grafo;
 
 	public static void main(String[] args) {
-		criarGrafoFluxo();
+		criarGrafoArvore();
 		dizSeTemCiclo(grafo);
 	}
 
 	private static void dizSeTemCiclo(Grafo<?> grafo) {
 		if (grafo.verificaCiclo()) {
-			System.err.println("Existe um ciclo na matriz de fluxo de atendimento\n");
+			System.err.println("Existe um ciclo na árvore de decisão\n");
 		} else {
 			System.out.println("Não existe um ciclo\n");
 		}
 	}
 
-	public static void criarGrafoFluxo() {
+	public static void criarGrafoArvore() {
 
 		Vertice<String> A = new Vertice<>("A", "Paciente maior de idade na APS");
 		Vertice<String> B = new Vertice<>("B", "Verificar PA (duas verificações)");

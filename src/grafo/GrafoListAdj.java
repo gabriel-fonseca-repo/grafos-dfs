@@ -2,14 +2,13 @@ package grafo;
 
 import abst.Grafo;
 import util.GrafoUtil;
-import util.OutputUtil;
 
 public class GrafoListAdj<T> extends Grafo<T> {
 
 	@Override
 	public boolean verificaCiclo() {
 		int[][] matriz = GrafoUtil.construirMatriz(this);
-		OutputUtil.imprimirMatrizAdjacencia(matriz, this);
+		GrafoUtil.imprimirMatrizAdjacencia(matriz, this);
 		vertices.get(0).setVisitado(true);
 		return verificaCiclo(vertices.get(0));
 	}
