@@ -23,38 +23,35 @@ public class MainMatriz {
     }
 
     public static void criarGrafo1() {
-        Vertice<String> A = new Vertice<>("A");
-        Vertice<String> B = new Vertice<>("B");
-        Vertice<String> C = new Vertice<>("C");
-
-        A.adicionarConectado(C);
-        B.adicionarConectado(A);
-        C.adicionarConectado(B);
-
-        grafo = new GrafoMatrAdj<>();
-        grafo.adicionarVertice(A);
-        grafo.adicionarVertice(B);
-        grafo.adicionarVertice(C);
+//        Vertice<String> A = new Vertice<>("A", rotulo);
+//        Vertice<String> B = new Vertice<>("B", rotulo);
+//        Vertice<String> C = new Vertice<>("C", rotulo);
+//
+//        A.adicionarConectado(C);
+//        B.adicionarConectado(A);
+//        C.adicionarConectado(B);
+//
+//        grafo = new GrafoMatrAdj<>();
+//        grafo.adicionarVertice(A);
+//        grafo.adicionarVertice(B);
+//        grafo.adicionarVertice(C);
     }
 
     public static void criarGrafo2() {
-        Vertice<String> A = new Vertice<>("A");
-        Vertice<String> B = new Vertice<>("B");
-        Vertice<String> C = new Vertice<>("C");
-        Vertice<String> D = new Vertice<>("D");
-
-        A.adicionarConectado(B);
-        B.adicionarConectado(C);
-        C.adicionarConectado(D);
-
-        //A.adicionarConectado(A);
-        //D.adicionarConectado(B);
-
-
-        grafo = new GrafoMatrAdj<>();
-        grafo.adicionarVertice(A);
-        grafo.adicionarVertice(B);
-        grafo.adicionarVertice(C);
-        grafo.adicionarVertice(D);
+//        Vertice<String> A = new Vertice<>("A", rotulo);
+//        Vertice<String> B = new Vertice<>("B", rotulo);
+//        Vertice<String> C = new Vertice<>("C", rotulo);
+//        Vertice<String> D = new Vertice<>("D", rotulo);
+//
+//        A.adicionarConectado(B);
+//        B.adicionarConectado(C);
+//        C.adicionarConectado(D);
+//
+//        //A.adicionarConectado(A);
+//        //D.adicionarConectado(B);
+//
+//
+//        grafo = new GrafoMatrAdj<>();
+//        grafo.adicionarVertice(A, B, C, D);
     }
 }

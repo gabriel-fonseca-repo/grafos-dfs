@@ -7,22 +7,24 @@ import java.util.List;
 
 public abstract class Grafo<T> {
 
-    protected List<Vertice<T>> vertices;
+	protected List<Vertice<T>> vertices;
 
-    protected int[][] matriz;
+	public Grafo() {
+		this.vertices = new ArrayList<>();
+	}
 
-    public Grafo() {
-        this.vertices = new ArrayList<>();
-    }
+	public void adicionarVertice(Vertice<T> vertice) {
+		this.vertices.add(vertice);
+	}
 
-    public void adicionarVertice(Vertice<T> vertice) {
-        this.vertices.add(vertice);
-    }
+	public void adicionarVertice(Vertice<T>... vertice) {
+		this.vertices.addAll(List.of(vertice));
+	}
 
-    public abstract boolean verificaCiclo();
+	public abstract boolean verificaCiclo();
 
-    public List<Vertice<T>> getVertices() {
-        return this.vertices;
-    }
+	public List<Vertice<T>> getVertices() {
+		return this.vertices;
+	}
 
 }
