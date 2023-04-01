@@ -1,3 +1,5 @@
+package main;
+
 import abst.Grafo;
 import grafo.GrafoMatrAdj;
 import grafo.Vertice;
