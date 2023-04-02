@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d7d5ba-a833-497c-a06b-d7556f97c069" name="Changes" comment="Desenvolvido algoritmo de tarjan para detecção de CFCs.">
+    <list default="true" id="34d7d5ba-a833-497c-a06b-d7556f97c069" name="Changes" comment="Otimizações no algoritmo de Kosaraju">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainCFC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainCFC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/CFCUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/CFCUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/MainCFC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainCFC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/CFCUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/CFCUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +151,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678235166490</updated>
       <workItem from="1678235167305" duration="4639000" />
-      <workItem from="1680462770555" duration="13824000" />
+      <workItem from="1680462770555" duration="14721000" />
     </task>
     <task id="LOCAL-00001" summary="Deletada versão inicial.">
       <created>1678406769305</created>
@@ -170,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680475584020</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Otimizações no algoritmo de Kosaraju">
+      <created>1680476649467</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680476649467</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +194,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deletada versão inicial." />
     <MESSAGE value="Desenvolvido algoritmo de tarjan para detecção de CFCs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Desenvolvido algoritmo de tarjan para detecção de CFCs." />
+    <MESSAGE value="Otimizações no algoritmo de Kosaraju" />
+    <option name="LAST_COMMIT_MESSAGE" value="Otimizações no algoritmo de Kosaraju" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

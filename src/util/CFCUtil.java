@@ -33,21 +33,20 @@ public class CFCUtil<E> {
         grafoTransposto.getVertices().forEach(e -> e.setVisitado(false));
         pilha.forEach(e -> e.setVisitado(false));
         while (!pilha.empty()) {
-            VerticeForte<E> verticeForte = pilha.pop();
-            if (!verticeForte.isVisitado()) {
-                DFSUtil(verticeForte);
+            VerticeForte<E> v = pilha.pop();
+            if (!v.isVisitado()) {
+                dfs(v);
                 System.out.println();
             }
         }
     }
 
-    private static <E> void DFSUtil(VerticeForte<E> v) {
+    private static <E> void dfs(VerticeForte<E> v) {
         v.setVisitado(true);
         System.out.print(v.getRotulo() + " ");
 
         for (VerticeForte<E> e : v.getSucessores()) {
-            if (!e.isVisitado())
-                DFSUtil(e);
+            if (!e.isVisitado()) dfs(e);
         }
     }
 
