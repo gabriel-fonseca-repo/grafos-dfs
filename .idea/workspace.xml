@@ -4,33 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d7d5ba-a833-497c-a06b-d7556f97c069" name="Changes" comment="Deletada versão inicial.">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grafo/Grafo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grafo/VerticeForte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grafo/VerticeFraco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grafo/dirigido/Vertice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/MainCFC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/CFCUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="34d7d5ba-a833-497c-a06b-d7556f97c069" name="Changes" comment="Desenvolvido algoritmo de tarjan para detecção de CFCs.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grafos-dfs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/grafos-dfs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abst/Grafo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grafo/GrafoListAdj.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grafo/GrafoMatrAdj.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grafo/Vertice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainArvoreDeDecisao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainArvoreDeDecisao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/MainFluxoDeAtendimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainFluxoDeAtendimento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/GrafoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/GrafoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/abst/Grafo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grafo/GrafoListAdj.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grafo/GrafoMatrAdj.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/grafo/Vertice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/MainArvoreDeDecisao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainArvoreDeDecisao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/MainFluxoDeAtendimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainFluxoDeAtendimento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/GrafoUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/GrafoUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/MainCFC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/MainCFC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/CFCUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/CFCUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/MainCFC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/MainCFC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/CFCUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/CFCUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678235166490</updated>
       <workItem from="1678235167305" duration="4639000" />
-      <workItem from="1680462770555" duration="12768000" />
+      <workItem from="1680462770555" duration="13824000" />
     </task>
     <task id="LOCAL-00001" summary="Deletada versão inicial.">
       <created>1678406769305</created>
@@ -184,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678406769305</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Desenvolvido algoritmo de tarjan para detecção de CFCs.">
+      <created>1680475584020</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680475584020</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +189,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deletada versão inicial." />
-    <option name="LAST_COMMIT_MESSAGE" value="Deletada versão inicial." />
+    <MESSAGE value="Desenvolvido algoritmo de tarjan para detecção de CFCs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Desenvolvido algoritmo de tarjan para detecção de CFCs." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

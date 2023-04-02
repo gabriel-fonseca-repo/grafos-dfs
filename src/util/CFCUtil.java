@@ -7,20 +7,7 @@ import java.util.Stack;
 
 public class CFCUtil<E> {
 
-    private final Grafo<VerticeForte<E>, E> grafo;
-    private final Stack<VerticeForte<E>> pilha;
-
-    public CFCUtil(Grafo<VerticeForte<E>, E> grafo) {
-        this.grafo = grafo;
-        this.pilha = new Stack<>();
-    }
-
-    public CFCUtil(Grafo<VerticeForte<E>, E> grafo, Stack<VerticeForte<E>> pilha) {
-        this.grafo = grafo;
-        this.pilha = pilha;
-    }
-
-    private Grafo<VerticeForte<E>, E> transporGrafo() {
+    private static <E> Grafo<VerticeForte<E>, E> transporGrafo(Grafo<VerticeForte<E>, E> grafo) {
         Grafo<VerticeForte<E>, E> g = new Grafo<>();
         grafo.getVertices().forEach(e -> {
             e.inverterVertice();
@@ -29,32 +16,32 @@ public class CFCUtil<E> {
         return g;
     }
 
-    private void preencherPilha(VerticeForte<E> v) {
+    private static <E> void preencherPilha(VerticeForte<E> v, Stack<VerticeForte<E>> pilha) {
         v.setVisitado(true);
         for (VerticeForte<E> n : v.getSucessores()) {
             if (!n.isVisitado()) {
-                preencherPilha(n);
+                preencherPilha(n, pilha);
             }
         }
         pilha.push(v);
     }
 
-    public void printarCFCs() {
-        grafo.getVertices().stream().filter(e -> !e.isVisitado()).forEach(this::preencherPilha);
-        Grafo<VerticeForte<E>, E> grafoTranspose = transporGrafo();
-        grafoTranspose.getVertices().forEach(e -> e.setVisitado(false));
+    public static <E> void printarCFCs(Grafo<VerticeForte<E>, E> grafo) {
+        Stack<VerticeForte<E>> pilha = new Stack<>();
+        grafo.getVertices().stream().filter(e -> !e.isVisitado()).forEach(e -> preencherPilha(e, pilha));
+        Grafo<VerticeForte<E>, E> grafoTransposto = transporGrafo(grafo);
+        grafoTransposto.getVertices().forEach(e -> e.setVisitado(false));
         pilha.forEach(e -> e.setVisitado(false));
-        CFCUtil<E> cfcTranspose = new CFCUtil<>(grafoTranspose, pilha);
         while (!pilha.empty()) {
             VerticeForte<E> verticeForte = pilha.pop();
             if (!verticeForte.isVisitado()) {
-                cfcTranspose.DFSUtil(verticeForte);
+                DFSUtil(verticeForte);
                 System.out.println();
             }
         }
     }
 
-    public void DFSUtil(VerticeForte<E> v) {
+    private static <E> void DFSUtil(VerticeForte<E> v) {
         v.setVisitado(true);
         System.out.print(v.getRotulo() + " ");
 
