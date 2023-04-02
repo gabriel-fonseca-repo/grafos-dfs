@@ -1,48 +1,47 @@
 package main;
 
-import abst.Grafo;
-import grafo.GrafoMatrAdj;
-import grafo.Vertice;
+import grafo.Grafo;
+import grafo.VerticeFraco;
 
 public class MainFluxoDeAtendimento {
 
-	public static Grafo<String> grafo;
+    public static Grafo<VerticeFraco<String>, String> grafo;
 
-	public static void main(String[] args) {
-		criarGrafoFluxo();
-		dizSeTemCiclo(grafo);
-	}
+    public static void main(String[] args) {
+        criarGrafoFluxo();
+        dizSeTemCiclo(grafo);
+    }
 
-	private static void dizSeTemCiclo(Grafo<?> grafo) {
-		if (grafo.verificaCiclo()) {
-			System.out.println("Existe um ciclo\n");
-		} else {
-			System.out.println("Não existe um ciclo\n");
-		}
-	}
+    private static void dizSeTemCiclo(Grafo<?, ?> grafo) {
+        if (grafo.verificaCiclo()) {
+            System.out.println("Existe um ciclo\n");
+        } else {
+            System.out.println("Não existe um ciclo\n");
+        }
+    }
 
-	public static void criarGrafoFluxo() {
+    public static void criarGrafoFluxo() {
 
-		Vertice<String> A = new Vertice<>("A", "Recepção");
-		Vertice<String> B = new Vertice<>("B", "Consulta");
-		Vertice<String> C = new Vertice<>("C", "Emergência");
-		Vertice<String> D = new Vertice<>("D", "Consultório");
-		Vertice<String> E = new Vertice<>("E", "Recepção Imagem");
-		Vertice<String> F = new Vertice<>("F", "Enfermaria");
-		Vertice<String> G = new Vertice<>("G", "UTI");
-		Vertice<String> H = new Vertice<>("H", "Centro cirurgico");
+        VerticeFraco<String> A = new VerticeFraco<>("A", "Recepção");
+        VerticeFraco<String> B = new VerticeFraco<>("B", "Consulta");
+        VerticeFraco<String> C = new VerticeFraco<>("C", "Emergência");
+        VerticeFraco<String> D = new VerticeFraco<>("D", "Consultório");
+        VerticeFraco<String> E = new VerticeFraco<>("E", "Recepção Imagem");
+        VerticeFraco<String> F = new VerticeFraco<>("F", "Enfermaria");
+        VerticeFraco<String> G = new VerticeFraco<>("G", "UTI");
+        VerticeFraco<String> H = new VerticeFraco<>("H", "Centro cirurgico");
 
-		A.adicionarConectado(B, C);
-		B.adicionarConectado(D, E);
-		C.adicionarConectado(E, F);
-		D.adicionarConectado(A, E);
-		E.adicionarConectado(D, F);
-		F.adicionarConectado(H, G, E, A);
-		G.adicionarConectado(F, H);
-		H.adicionarConectado(F, G);
+        A.adicionarConectado(B, C);
+        B.adicionarConectado(D, E);
+        C.adicionarConectado(E, F);
+        D.adicionarConectado(A, E);
+        E.adicionarConectado(D, F);
+        F.adicionarConectado(H, G, E, A);
+        G.adicionarConectado(F, H);
+        H.adicionarConectado(F, G);
 
-		grafo = new GrafoMatrAdj<>();
-		grafo.adicionarVertice(A, B, C, D, E, F, G, H);
+        grafo = new Grafo<>();
+        grafo.adicionarVertice(A, B, C, D, E, F, G, H);
 
-	}
+    }
 }
