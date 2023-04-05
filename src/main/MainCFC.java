@@ -1,13 +1,17 @@
 package main;
 
+import grafo.CFC;
 import grafo.Grafo;
+import grafo.GrafoDirigido;
 import grafo.VerticeForte;
 import util.CFCUtil;
+
+import java.util.List;
 
 public class MainCFC {
     public static void main(String[] args) {
 
-        Grafo<VerticeForte<String>, String> grafo = new Grafo<>();
+        GrafoDirigido<String> grafo = new GrafoDirigido<>();
 
         VerticeForte<String> v0 = new VerticeForte<>("0", "Vertice 0");
         VerticeForte<String> v1 = new VerticeForte<>("1", "Vertice 1");
@@ -25,6 +29,7 @@ public class MainCFC {
         v4.adicionarSucessor(v5);
 
         grafo.adicionarVertice(v0, v1, v2, v3, v4, v5);
-        CFCUtil.printarCFCs(grafo);
+        List<CFC<String>> cfcs = CFCUtil.adiquirirCFCs(grafo);
+        CFCUtil.recomendar(cfcs);
     }
 }

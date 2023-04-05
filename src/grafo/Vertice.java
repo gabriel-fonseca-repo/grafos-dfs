@@ -1,4 +1,4 @@
-package grafo.dirigido;
+package grafo;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package util;
 
 import grafo.Grafo;
-import grafo.dirigido.Vertice;
+import grafo.Vertice;
 
 import java.util.List;
 

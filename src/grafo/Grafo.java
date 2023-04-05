@@ -1,6 +1,5 @@
 package grafo;
 
-import grafo.dirigido.Vertice;
 import util.GrafoUtil;
 
 import java.util.ArrayList;
