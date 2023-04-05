@@ -5,8 +5,10 @@ import grafo.GrafoDirigido;
 import grafo.VerticeForte;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 public class CFCUtil<E> {
 
@@ -43,19 +45,30 @@ public class CFCUtil<E> {
     }
 
     public static <E> void recomendar(List<CFC<E>> cfcs) {
+
+        cfcs.stream()
+                .map(CFC::getCluster)
+                .flatMap(Collection::stream)
+                .toList()
+                .stream().filter(VerticeForte::isTransposto)
+                .forEach(VerticeForte::inverterVertice);
+
+        System.out.print("Ligações recomendadas: ");
         for (CFC<E> cfcDaVez : cfcs) {
+            System.out.println();
             for (VerticeForte<E> vOut : cfcDaVez.getCluster()) {
                 if (cfcDaVez.getCluster().size() > 1) {
                     for (VerticeForte<E> vIn : vOut.getSucessores()) {
-                        if (!vIn.getSucessores().contains(vOut)) recomendar(vOut, vIn);
+                        if (!vIn.getSucessores().contains(vOut) && cfcDaVez.getCluster().contains(vIn))
+                            recomendar(vIn, vOut);
                     }
                 }
             }
         }
     }
 
-    private static <E> void recomendar(VerticeForte<E> vOut, VerticeForte<E> vIn) {
-        System.out.println("O vértice " + vOut.getRotulo() + " deveria seguir o vértice " + vIn.getRotulo());
+    private static <E> void recomendar(VerticeForte<E> vIn, VerticeForte<E> vOut) {
+        System.out.println(vIn.getRotulo() + " -> " + vOut.getRotulo());
     }
 
 }

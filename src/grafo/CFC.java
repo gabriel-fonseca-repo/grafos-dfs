@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CFC<E> {
+
     private List<VerticeForte<E>> cluster;
 
     public CFC() {
@@ -16,5 +17,10 @@ public class CFC<E> {
 
     public void setCluster(List<VerticeForte<E>> cluster) {
         this.cluster = cluster;
+    }
+
+    @Override
+    public String toString() {
+        return cluster.toString();
     }
 }
