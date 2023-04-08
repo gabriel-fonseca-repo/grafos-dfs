@@ -12,13 +12,33 @@ public class MainCFC {
 
         GrafoDirigido<String> grafo = new GrafoDirigido<>();
 
-        preencherGrafo1(grafo);
+        preencherGrafo3(grafo);
 
         List<CFC<String>> cfcs = CFCUtil.adiquirirCFCs(grafo);
         System.out.println("Componentes fortemente conexos: ");
         cfcs.forEach(System.out::println);
         System.out.println();
         CFCUtil.recomendar(cfcs);
+    }
+
+    private static void preencherGrafo3(GrafoDirigido<String> grafo) {
+        VerticeForte<String> v1 = new VerticeForte<>("1", "Vertice 1");
+        VerticeForte<String> v2 = new VerticeForte<>("2", "Vertice 2");
+        VerticeForte<String> v3 = new VerticeForte<>("3", "Vertice 3");
+        VerticeForte<String> v4 = new VerticeForte<>("4", "Vertice 4");
+        VerticeForte<String> v5 = new VerticeForte<>("5", "Vertice 5");
+        VerticeForte<String> v6 = new VerticeForte<>("6", "Vertice 6");
+        VerticeForte<String> v7 = new VerticeForte<>("7", "Vertice 7");
+
+        v1.adicionarSucessor(v2, v4);
+        v2.adicionarSucessor(v4, v5);
+        v3.adicionarSucessor(v1);
+        v4.adicionarSucessor(v3);
+        v5.adicionarSucessor(v6);
+        v6.adicionarSucessor(v7);
+        v7.adicionarSucessor(v5);
+
+        grafo.adicionarVertice(v1, v2, v3, v4, v5, v6, v7);
     }
 
     private static void preencherGrafo1(GrafoDirigido<String> grafo) {
