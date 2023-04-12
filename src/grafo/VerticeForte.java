@@ -71,6 +71,10 @@ public class VerticeForte<E> extends Vertice<E> {
         this.predecessores = predecessores;
     }
 
+    public void setTransposto(boolean transposto) {
+        this.transposto = transposto;
+    }
+
     public boolean isTransposto() {
         return transposto;
     }

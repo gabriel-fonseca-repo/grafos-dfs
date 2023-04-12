@@ -4,10 +4,7 @@ import grafo.CFC;
 import grafo.GrafoDirigido;
 import grafo.VerticeForte;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class CFCUtil<E> {
 
@@ -19,7 +16,7 @@ public class CFCUtil<E> {
         pilha.push(v);
     }
 
-    public static <E> List<CFC<E>> adiquirirCFCs(GrafoDirigido<E> grafo) {
+    public static <E> List<CFC<E>> adquirirCFCs(GrafoDirigido<E> grafo) {
         Stack<VerticeForte<E>> pilha = new Stack<>();
         List<CFC<E>> listaCfcs = new ArrayList<>();
         grafo.getVertices().stream()
@@ -50,21 +47,20 @@ public class CFCUtil<E> {
         cfcs.stream()
                 .map(CFC::getCluster)
                 .flatMap(Collection::stream)
-                .toList()
-                .stream().filter(VerticeForte::isTransposto)
+                .filter(VerticeForte::isTransposto)
                 .forEach(VerticeForte::inverterVertice);
+
         System.out.print("Ligações recomendadas: ");
-        for (CFC<E> cfcDaVez : cfcs) {
+
+        cfcs.stream().filter(cfc -> cfc.getCluster().size() > 1).forEach(cfc -> {
             System.out.println();
-            for (VerticeForte<E> vOut : cfcDaVez.getCluster()) {
-                if (cfcDaVez.getCluster().size() > 1) {
-                    for (VerticeForte<E> vIn : vOut.getSucessores()) {
-                        if (!vIn.getSucessores().contains(vOut) && cfcDaVez.getCluster().contains(vIn))
-                            recomendar(vIn, vOut);
-                    }
+            for (VerticeForte<E> vOut : cfc.getCluster()) {
+                for (VerticeForte<E> vIn : cfc.getCluster()) {
+                    if (!vIn.getSucessores().contains(vOut) && !Objects.equals(vIn, vOut))
+                        recomendar(vOut, vIn);
                 }
             }
-        }
+        });
     }
 
     private static <E> void recomendar(VerticeForte<E> vIn, VerticeForte<E> vOut) {
